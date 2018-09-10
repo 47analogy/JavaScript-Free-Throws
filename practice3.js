@@ -20,6 +20,10 @@
 */
 
 const justiceLeague = ['Robin', 'Batman', 'Wonder Woman', 'Flash', 'Aquaman'];
+const removedHero = justiceLeague.shift();
+console.log(justiceLeague);
+console.log(removedHero);
+
 
 
 
@@ -29,6 +33,9 @@ const justiceLeague = ['Robin', 'Batman', 'Wonder Woman', 'Flash', 'Aquaman'];
 */
 
 const middleEarth = ['Frodo', 'Samwise', 'Gandalf', 'Sauraman', 'Treebeard'];
+const traitor = middleEarth.splice(3, 1);
+console.log(middleEarth);
+console.log(traitor);
 
 
 
@@ -39,7 +46,13 @@ const middleEarth = ['Frodo', 'Samwise', 'Gandalf', 'Sauraman', 'Treebeard'];
 
 const numbers = [2, 3, 4, 5, 6];
 
+// const numsByTen = numbers.map(num => {
+//    return num * 10
+// });
+
 const numsByTen = numbers.map(num => num * 10);
+
+console.log(numsByTen);
 
 
 
@@ -51,30 +64,33 @@ const numsByTen = numbers.map(num => num * 10);
 */
 
 const friends = [{
-        name: 'Monica',
-        gender: 'F'
-    },
-    {
-        name: 'Chandler',
-        gender: 'M'
-    },
-    {
-        name: 'Ross',
-        gender: 'M'
-    },
-    {
-        name: 'Phoebe',
-        gender: 'F'
-    },
-    {
-        name: 'Joey',
-        gender: 'M'
-    },
-    {
-        name: 'Rachel',
-        gender: 'M'
-    }
+    name: 'Monica',
+    gender: 'F'
+},
+{
+    name: 'Chandler',
+    gender: 'M'
+},
+{
+    name: 'Ross',
+    gender: 'M'
+},
+{
+    name: 'Phoebe',
+    gender: 'F'
+},
+{
+    name: 'Joey',
+    gender: 'M'
+},
+{
+    name: 'Rachel',
+    gender: 'M'
+}
 ];
 
-const femaleFriends = friends; // finish this
-const male = friends; // finish this
+const femaleFriends = friends.filter(woman => woman.gender = 'F'); // finish this
+const maleFriends = friends.filter(man => man.gender = "M"); // finish this
+
+console.log(femaleFriends);
+console.log(maleFriends);
