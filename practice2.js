@@ -12,12 +12,13 @@
 */
 
 const student = {
-    name: 'Jonas',
-    age: '12',
-    gender: 'M',
-    role: 'Receiver'
+  name: 'Jonas',
+  age: '12',
+  gender: 'M',
+  role: 'Receiver'
 };
-const studentKeys = Object; // finish this.
+const studentKeys = Object.keys(student); // finish this.
+console.log(studentKeys);
 
 /* 
   Problem 2: Giver Info
@@ -25,15 +26,23 @@ const studentKeys = Object; // finish this.
   return an array of an Objects values
 */
 
-const studentValues = Object; // finish this.
+const studentValues = Object.values(student); // finish this.
+console.log(studentValues);
 
 /* 
   Problem 3: Giver Info
-  Add a list of charecters to Jonas' object
+  Add a list of characters to Jonas' object
   The list should be called 'characters' and it should be an array.
   example:
   { name: 'Jonas', age: '12', gender: 'M', role: 'Receiver', characters: ['Lily', 'Mother', 'Father', 'Caleb', 'Asher']}
   next: select that list and iterate over it using `.forEach` simply log the name of each char in the list;
 */
 
-const listOfChars = student.characters; // finish this.
+const listOfChars = student.characters = ['Lily', 'Mother', 'Father', 'Caleb', 'Asher']; // finish this.
+console.log(listOfChars)
+
+console.log(student)
+
+listOfChars.forEach(character => {
+  console.log(character);
+})
