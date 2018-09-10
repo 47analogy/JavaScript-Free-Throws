@@ -5,6 +5,7 @@
 */
 
 // code for `name` goes here
+const name = 'Deuce';
 
 /*
   Problem 2: create a variable called `age`:
@@ -12,6 +13,8 @@
 */
 
 // code for `age` goes here
+let age = 500;
+
 
 /*
   Problem create a variable called `location` and save it to where you're currently sitting. 
@@ -21,12 +24,14 @@
 // code for `location` goes here
 let location = 'home';
 
+
 /*
   Problem create a variable called `faveBook` 
   LIKE above, you may want to consider if this is some data about yourself that could change.
 */
 
 // code for `faveBook` goes here
+let faveBook = 'Harry Potter';
 
 /*
   Problem create a variable called `faveBand` 
@@ -35,6 +40,7 @@ let location = 'home';
 */
 
 // code for `faveBand` goes here
+let faveBand = 'GunsNRoses';
 
 /*
   Problem create a variable called `faveFood` 
@@ -42,3 +48,4 @@ let location = 'home';
 */
 
 // code for `faveFood` goes here
+let faveFood = 'Fish';
