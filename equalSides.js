@@ -37,8 +37,6 @@ function equalSides(arr) {
   return -1;
 }
 
-console.log(equalSides(arr1));
-
 // #2
 function equalSides(arr) {
   let leftSum = 0;
@@ -54,8 +52,6 @@ function equalSides(arr) {
   }
   return -1;
 }
-
-console.log(equalSides(arr1));
 
 // #3
 function equalSides(arr) {
