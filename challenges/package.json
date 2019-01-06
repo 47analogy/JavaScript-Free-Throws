@@ -1,0 +1,15 @@
+{
+	"scripts": {
+		"dev": "lite-server",
+		"test": "mocha || true"
+	},
+	"devDependencies": {
+		"lite-server": "^2.3.0"
+	},
+	"dependencies": {
+		"chai": "^4.2.0",
+		"mocha": "^5.2.0",
+		"sinon": "^7.2.2",
+		"sinon-chai": "^3.3.0"
+	}
+}
