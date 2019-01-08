@@ -21,14 +21,13 @@ function persistence(num) {
 
 	// loop until single digit
 	while (num.length > 1) {
-		times++; // any number with 2+ digits gets multiple at least once
-		// split into digits, turn into a number array, sum digits
-		// turn back into string to determine length
+		times++; // any number with 2+ digits gets multiplied at least once
+
 		num = num
-			.split("")
-			.map(Number)
-			.reduce((acc, cum) => acc * cum)
-			.toString();
+			.split("") // split into digits
+			.map(Number) // turn into a number array
+			.reduce((acc, cum) => acc * cum) // multiply digits
+			.toString(); // turn back into string to determine length
 	}
 	return times;
 }
