@@ -1,7 +1,7 @@
 {
 	"scripts": {
 		"dev": "lite-server",
-		"test": "jest"
+		"test": "jest --watchAll"
 	},
 	"devDependencies": {
 		"jest": "^24.1.0",
