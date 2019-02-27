@@ -18,7 +18,6 @@ const countVowels = str => {
 	let count = 0;
 
 	for (let i = 0; i < str.length; i++) {
-		console.log(str[i]);
 		if (str[i].match(vowels)) {
 			count += 1;
 		}
@@ -26,6 +25,31 @@ const countVowels = str => {
 	return count;
 };
 
-console.log(countVowels('veritas'));
+// Given a string of text, find and return
+// the most recurring character
+const maxRecurringChar = str => {
+	const obj = {};
+	let count = 0;
+	let max = ''; //output
 
-module.exports = { reverseString, countVowels };
+	str = str.toLowerCase();
+
+	for (let char of str) {
+		if (obj.hasOwnProperty(char)) {
+			obj[char]++;
+		} else {
+			obj[char] = 1;
+		}
+	}
+
+	for (let char in obj) {
+		if (obj[char] > count) {
+			count = obj[char];
+			max = char;
+		}
+	}
+	// console.log(max)
+	return max;
+};
+
+module.exports = { reverseString, countVowels, maxRecurringChar };

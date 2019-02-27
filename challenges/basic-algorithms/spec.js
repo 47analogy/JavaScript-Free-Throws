@@ -1,4 +1,4 @@
-const { reverseString, countVowels } = require('./index');
+const { reverseString, countVowels, maxRecurringChar } = require('./index');
 
 describe('Tests for reverseString', () => {
 	test('reverseString is a function', () => {
@@ -34,5 +34,24 @@ describe('Test for countVowel', () => {
 	// neglected
 	test('returns the number of vowels found when string is capitalized', () => {
 		expect(countVowels('AEIOU')).toEqual(5);
+	});
+});
+
+describe('Test for maxRecurringChar', () => {
+	test('maxRecurringChar is a function', () => {
+		expect(typeof maxRecurringChar).toEqual('function');
+	});
+	test('outputs a string', () => {
+		expect(typeof maxRecurringChar('output')).toBe('string');
+	});
+	test('outputs the most recurring character', () => {
+		expect(maxRecurringChar('aabacada')).toEqual('a');
+	});
+	test('outputs for mixed cases', () => {
+		expect(maxRecurringChar('aBBghB')).toEqual('b');
+	});
+	// neglected
+	test('output works for numbers', () => {
+		expect(maxRecurringChar('a4dd4fr4k')).toEqual('4');
 	});
 });
