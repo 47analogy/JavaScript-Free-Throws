@@ -70,3 +70,40 @@ function XOR(x, y) {
 		return 0;
 	}
 }
+
+//----------------------------------------------------
+// nand takes two Boolean values. If both values are true,
+// the result should be false. In the other cases the return
+// should be true.
+
+function nand(val1, val2) {
+	if (val1 && val2) {
+		return false;
+	} else {
+		return true;
+	}
+}
+
+// NOR (Not OR) If both values are false, the result should be true.
+// In the other cases the return should be false.
+
+function nor(bool1, bool2) {
+	if (bool1 === false && bool2 === false) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+//
+
+// XOR takes two Boolean values. If both values are different, the result should be true.
+// If both values are the same, the result should be false.
+
+function xor(val1, val2) {
+	if (val1 !== val2) {
+		return true;
+	} else {
+		return false;
+	}
+}
