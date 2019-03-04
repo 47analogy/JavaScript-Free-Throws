@@ -9,26 +9,51 @@ too much (like this (and this))) they get confusing."
 parenthesisPair(str, 10) => 79
 */
 
+// use a 'stack'
+// const parenthesisPair = (str, pos) => {
+// 	const opening = '(';
+// 	const closing = ')';
+
+// 	// counter to keep track of matching pair
+// 	let count = 0;
+
+// 	// loop through string from position pos
+// 	for (let i = pos + 1; i < str.length; i++) {
+// 		// if '(' then increase the count
+// 		if (str[i] === opening) {
+// 			count = count + 1;
+// 			// if ')' then check the count
+// 		} else if (str[i] === closing) {
+// 			// if count is 0 it's a match and return index
+// 			if (count === 0) {
+// 				return i;
+// 			}
+// 			// other decrease count and continue
+// 			count = count - 1;
+// 		}
+// 	}
+// };
+
+// EXPLICIT
+// loop thru string
+//  if opening => add to stack
+//      if closing => check stack capacity
+//          if stack empty => return index
+//          else remove from stack
+
 const parenthesisPair = (str, pos) => {
+	const stack = [];
 	const opening = '(';
 	const closing = ')';
 
-	// counter to keep track of matching pair
-	let count = 0;
-
-	// loop through string from position pos
 	for (let i = pos + 1; i < str.length; i++) {
-		// if '(' then increase the count
 		if (str[i] === opening) {
-			count = count + 1;
-			// if ')' then check the count
+			stack.push(opening);
 		} else if (str[i] === closing) {
-			// if count is 0 its a match and return index
-			if (count === 0) {
+			if (stack.length === 0) {
 				return i;
 			}
-			// other decrease count and continue
-			count = count - 1;
+			stack.pop();
 		}
 	}
 };
