@@ -13,14 +13,13 @@ Sample Output: 10 14
 
 const miniMaxSum = arr => {
 	const min = Math.min(...arr); // have to use spread for array!
-	const max = Math.max(...arr);
+    const max = Math.max(...arr);
 
-	let sumArr = arr.reduce((tot, num) => {
+	let sum = arr.reduce((tot, num) => {
 		return tot + num;
 	});
 
-	console.log(sumArr - max, sumArr - min);
-	return sumArr[0] - max, sumArr[0] - min;
+	console.log(sum - max, sum - min);
 };
 
-console.log(miniMaxSum([1, 2, 3, 4, 5]));
+
