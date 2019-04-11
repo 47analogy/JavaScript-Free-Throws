@@ -44,3 +44,27 @@ const findRotationPoint = words => {
 	rotationIndex = words.indexOf(rotationWord);
 	return rotationIndex;
 };
+
+// using modified binary search
+const findRotationPoint = arr => {
+	const firstIndex = arr[0];
+
+	let lowIndex = 0;
+	let highIndex = arr.length - 1;
+
+	while (lowIndex < highIndex) {
+		const midIndex = Math.floor((lowIndex + highIndex) / 2);
+		if (arr[midIndex] >= firstIndex) {
+			// look right
+			lowIndex = midIndex;
+		} else {
+			// look left
+			highIndex = midIndex;
+		}
+		// if low and high meet
+		if (lowIndex + 1 === highIndex) {
+			break;
+		}
+	}
+	return highIndex;
+};
