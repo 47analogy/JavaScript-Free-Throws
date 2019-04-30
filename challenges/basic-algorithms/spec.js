@@ -1,4 +1,9 @@
-const { reverseString, countVowels, maxRecurringChar } = require('./index');
+const {
+	reverseString,
+	countVowels,
+	maxRecurringChar,
+	capSentence
+} = require('./index');
 
 describe('Tests for reverseString', () => {
 	test('reverseString is a function', () => {
@@ -53,5 +58,17 @@ describe('Test for maxRecurringChar', () => {
 	// neglected
 	test('output works for numbers', () => {
 		expect(maxRecurringChar('a4dd4fr4k')).toEqual('4');
+	});
+});
+
+describe('Test for capSentence', () => {
+	test('capSentence is a function', () => {
+		expect(typeof capSentence).toEqual('function');
+	});
+	test('capSentence shoud return a string', () => {
+		expect(typeof capSentence('Todd Bri')).toBe('string');
+	});
+	test('capSentence should return first letters in caps', () => {
+		expect(capSentence('the tales of scotch!')).toEqual('The Tales Of Scotch!');
 	});
 });
