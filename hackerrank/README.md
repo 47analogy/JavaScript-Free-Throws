@@ -1,4 +1,4 @@
 ## Hackerrank Coding Challenges
 
-- [Counting Valleys](../master/hackerrank/countingValleys.js)
-- [Jumping On Clouds](../master/hackerrank/jumpingOnClouds.js)
+- [Counting Valleys](countingValleys.js)
+- [Jumping On Clouds](jumpingOnClouds.js)
