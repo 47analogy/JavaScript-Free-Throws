@@ -61,11 +61,11 @@ const findDuplicate = array => {
 const findDuplicate = array => {
 	const obj = {};
 
-	for (let i = 0; i < a.length; i++) {
-		if (obj[a[i]] !== undefined) {
-			return a[i];
+	for (let i = 0; i < array.length; i++) {
+		if (obj[array[i]] !== undefined) {
+			return array[i];
 		} else {
-			obj[a[i]] = i;
+			obj[array[i]] = i;
 		}
 	}
 	return -1;
