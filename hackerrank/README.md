@@ -5,3 +5,4 @@
 - [Equalize the Array](equalizeArray.js)
 - [Repeated String](repeatedString.js)
 - [2D Array - Hourglass](2DArray.js)
+- [Left Rotation](leftRotation.js)
