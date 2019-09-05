@@ -15,12 +15,9 @@ Output:
 const findDisappearedNumbers = nums => {
   const missingNums = [];
   let index = 1;
-  const sortedNums = nums.sort();
 
-  for (let i = 0; i < sortedNums.length; i++) {
-    let digit = sortedNums[i];
-
-    if (index !== digit && sortedNums.indexOf(index) === -1) {
+  for (let num of nums) {
+    if (nums.indexOf(index) === -1) {
       missingNums.push(index);
     }
     index++;
