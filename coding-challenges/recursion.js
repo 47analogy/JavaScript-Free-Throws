@@ -55,3 +55,19 @@ function recursiveRange (n) {
     return n + recursiveRange(n - 1)
   }
 }
+
+/*
+Write function fib that takes a number and returns
+the nth number of the Fibonacci sequence
+i.e.  fib(4) => 3
+      fib(10) => 55
+*/
+
+// 1, 1, 2, 3, 5, 8 (sum of two previous numbers)
+function fib (n) {
+  if (n === 1 || n === 2) {
+    return 1
+  } else {
+    return fib(n - 2) + fib(n - 1)
+  }
+}
