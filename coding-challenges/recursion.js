@@ -25,3 +25,19 @@ function factorial (n) {
     return n * factorial(n - 1)
   }
 }
+
+/*
+Write function productOfArray that takes an array of numbers and returns
+the product of them all
+i.e.  productOfArray([1, 2, 3]) => 6
+*/
+
+function productOfArray (arr) {
+  if (arr[0] === 0) return 0 // case where array contains just a zero
+
+  if (arr.length === 1) {
+    return 1
+  } else {
+    return arr[1] * productOfArray(arr.slice(1))
+  }
+}
