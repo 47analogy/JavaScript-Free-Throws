@@ -38,6 +38,20 @@ function productOfArray (arr) {
   if (arr.length === 1) {
     return 1
   } else {
-    return arr[1] * productOfArray(arr.slice(1))
+    return arr[1] * productOfArray(arr.slice(1)) // chop off an item
+  }
+}
+
+/*
+Write function recursiveRange that takes a number and adds
+up all the numbers from 0 to n
+i.e.  productOfArray(6) => 21
+*/
+
+function recursiveRange (n) {
+  if (n === 0) {
+    return 0
+  } else {
+    return n + recursiveRange(n - 1)
   }
 }
