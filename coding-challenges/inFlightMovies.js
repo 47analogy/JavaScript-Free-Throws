@@ -44,6 +44,7 @@ function inFlightMovies(flightLength, movieLengths) {
     if (moviesSeen.has(matchingSecondMovie)) {
       return true;
     }
+    
     moviesSeen.add(firstMovieSeen);
   }
   return false;
