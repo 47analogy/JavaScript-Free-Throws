@@ -14,6 +14,7 @@ number([]) // => []
 number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]
 */
 
+// 1st attempt
 const number = function(array) {
   let line = 1;
   const formatted = [];
@@ -24,3 +25,10 @@ const number = function(array) {
   }
   return formatted;
 };
+
+// 2nd attempt
+function number(array) {
+  return array.map((char, line) => {
+    return `${++line}: ${char}`;
+  });
+}
