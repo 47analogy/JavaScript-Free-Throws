@@ -41,7 +41,7 @@ PaginationHelper.prototype.pageIndex = function(itemIndex) {
 
   for (let i = 0; i < this.collection.length; i++) {
     let index = i;
-    if (index % 4 === 0) page++;
+    if (index % this.itemsPerPage === 0) page++;
     if (index === itemIndex) return --page;
   }
   return -1;
@@ -52,4 +52,4 @@ console.log(helper);
 console.log(helper.pageCount());
 console.log(helper.itemCount());
 console.log(helper.pageItemCount(1));
-console.log(helper.pageIndex(5));
+console.log(helper.pageIndex(0));
