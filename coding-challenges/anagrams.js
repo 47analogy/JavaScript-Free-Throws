@@ -63,6 +63,24 @@ function anagrams(word, words) {
   return anagrams;
 }
 
+// solush 2
+// sort everything and filter words that are the same
+function anagrams(word, words) {
+  const sortedWord = word
+    .split("")
+    .sort()
+    .join("");
+
+  return words.filter(word => {
+    return (
+      sortedWord === word
+        .split("")
+        .sort()
+        .join("")
+    );
+  });
+}
+
 console.log(anagrams("abba", ["aabb", "abcd", "bbaa", "dada"])); // ['aabb', 'bbaa']
 console.log(anagrams("racer", ["crazer", "carer", "racar", "caers", "racer"])); // ['carer', 'racer']
 console.log(anagrams("laser", ["lazing", "lazy", "lacer"])); // [];
