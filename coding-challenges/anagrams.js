@@ -24,38 +24,35 @@ anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 // solush 1
 function anagrams(word, words) {
   const anagrams = [];
-  const wordObj = createLetterFreq(word);
+  const originalWord = createLetterFreq(word);
 
-  // loop words and compare to letters
-  for (let i = 0; i < words.length; i++) {
-    let word = words[i];
-    let wordTest = createLetterFreq(word);
+  // line 30: don't confuse with the "word" parameter
+  words.map(word => {
+    let wordToTest = createLetterFreq(word);
     // if anagram add to anagrams array
-    if (compareFreq(wordObj, wordTest)) {
+    if (compareObjectFreq(originalWord, wordToTest)) {
       anagrams.push(word);
     }
-  }
+  });
 
-  function createLetterFreq(word) {
+  function createLetterFreq(term) {
     const letters = {};
-    for (let i = 0; i < word.length; i++) {
-      let letter = word[i];
+    term.split("").map(letter => {
       if (!letters[letter]) {
         letters[letter] = 0;
       }
       letters[letter]++;
-    }
+    });
     return letters;
   }
 
-  function compareFreq(obj1, obj2) {
+  function compareObjectFreq(obj1, obj2) {
     const obj1PropNames = Object.getOwnPropertyNames(obj1);
     const obj2PropNames = Object.getOwnPropertyNames(obj2);
 
     if (obj1PropNames.length !== obj2PropNames.length) return false;
 
-    for (let i = 0; i < obj1PropNames.length; i++) {
-      let propName = obj1PropNames[i];
+    for (let propName of obj1PropNames) {
       if (obj1[propName] !== obj2[propName]) {
         return false;
       }
