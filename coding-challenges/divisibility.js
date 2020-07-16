@@ -16,3 +16,10 @@ function isDivisible(n, x, y) {
     return false;
   }
 }
+
+//refactor
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0;
+}
+
+console.log(isDivisible(6, 3, 2));
