@@ -15,9 +15,7 @@ output:
 INSERT INTO table (user_id, email, operating_system) VALUES (1, "user1@email.com", "Linux");
 */
 
-// map array
-// convert keys to columns
-// convert values to values
+// map array and convert keys to columns, convert values to values
 // Create Insert statement
 const convertToSql = (data, table) => {
   // turn JSON to array of objects
@@ -26,7 +24,7 @@ const convertToSql = (data, table) => {
   let values;
 
   result.map((item) => {
-    columns = covertCameltoUnder(Object.keys(item).toString());
+    columns = camelToUnderScore(Object.keys(item).toString());
     values = Object.values(item);
   });
 
@@ -37,11 +35,10 @@ const convertToSql = (data, table) => {
     })
     .join(', ');
 
-  const query = `INSERT INTO ${table} (${columns}) VALUES (${values});`;
+  return `INSERT INTO ${table} (${columns}) VALUES (${values});`;
 
-  return query;
-
-  function covertCameltoUnder(title) {
+  // convert camel case to underscore
+  function camelToUnderScore(title) {
     return title.replace(/([A-Z])/g, '_$1').toLowerCase();
   }
 };
@@ -55,4 +52,4 @@ console.log(
     },
     'customers'
   )
-);
+); // INSERT INTO customers (user_id,email,operating_system) VALUES (1, 'user1@email.com', 'Linux');
